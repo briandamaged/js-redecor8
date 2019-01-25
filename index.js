@@ -1,11 +1,7 @@
 
-const compose = (
-  (decorators)=>
-    (next)=>
-      Array.from(decorators).reverse().reduce((_next, d)=> d(_next), next)
-);
-
-
 Object.assign(exports, {
-  compose,
+  compose: require('./redecor8/compose'),
+  LogsErrors: require('./redecor8/LogsErrors'),
+  Occasionally: require('./redecor8/Occasionally'),
+  When: require('./redecor8/When'),
 });
