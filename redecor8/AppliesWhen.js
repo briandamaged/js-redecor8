@@ -11,7 +11,7 @@
  *   4. Etc.
  *
  */
-const When = (
+const AppliesWhen = (
   (condition)=>
     (decorator)=>
       (next)=>
@@ -24,4 +24,4 @@ const When = (
         }
 );
 
-module.exports = exports = When;
+module.exports = exports = AppliesWhen;
