@@ -1,11 +1,23 @@
 
+/**
+ * This is a "Decorator Decorator".  It only applies
+ * its nested decorator when the condition evaluates
+ * to something truthy.  This can be useful in many
+ * scenarios, such as:
+ *
+ *   1. Logging only a subset of the data
+ *   2. Introducing logging for specific scenarios
+ *   3. Installing/Uninstalling behaviors at runtime
+ *   4. Etc.
+ *
+ */
 const When = (
   (condition)=>
-    (decorate)=>
+    (decorator)=>
       (next)=>
         async function() {
-          if(condition.apply(this, arguments)) {
-            return decorate(next).apply(this, arguments);
+          if(await condition.apply(this, arguments)) {
+            return decorator(next).apply(this, arguments);
           } else {
             return next.apply(this, arguments);
           }
