@@ -7,4 +7,5 @@ Object.assign(exports, {
   Occasionally: require('./redecor8/Occasionally'),
   OnErrorReturns: require('./redecor8/OnErrorReturns'),
   Pass: require('./redecor8/Pass'),
+  Redecor8: require('./redecor8/Redecor8'),
 });
