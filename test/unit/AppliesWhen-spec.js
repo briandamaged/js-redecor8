@@ -11,7 +11,7 @@ describe('AppliesWhen', function() {
   // This decorator ignores `next` and replaces it
   // with its own function.
   const decorator = (
-    (next)=>
+    ()=>
       function() {
         return DECORATOR_CALLED;
       }

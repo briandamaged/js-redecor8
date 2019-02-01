@@ -4,7 +4,8 @@
   "description": "Raw Function Decoration",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive ./test/unit"
+    "test": "mocha --recursive ./test/unit",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
+    "eslint": "^5.12.1",
+    "eslint-plugin-mocha": "^5.2.1",
     "mocha": "^5.2.0",
     "sinon": "^7.2.3",
     "sinon-chai": "^3.3.0"
